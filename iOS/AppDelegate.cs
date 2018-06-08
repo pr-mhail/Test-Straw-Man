@@ -1,6 +1,8 @@
 ﻿using Foundation;
 using UIKit;
 
+
+using StrawMan;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
@@ -18,7 +20,6 @@ namespace StrawMan.iOS {
         }
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions) {
-			AppCenter.Start("365ee2d3-c126-46ed-928d-3947e9dc1b56", typeof(Analytics), typeof(Crashes));
 
 			App.Initialize();
 

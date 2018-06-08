@@ -1,9 +1,10 @@
 ﻿using System;
+using StrawMan;
 using UIKit;
 
 namespace StrawMan.iOS {
     public partial class BrowseItemDetailViewController : UIViewController {
-        public ItemDetailViewModel ViewModel { get; set; }
+		public ItemDetailViewModel ViewModel { get; set; }
         public BrowseItemDetailViewController(IntPtr handle) : base(handle) { }
 
         public override void ViewDidLoad() {

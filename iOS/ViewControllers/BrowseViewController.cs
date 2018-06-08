@@ -2,6 +2,7 @@
 using System.Collections.Specialized;
 
 using Foundation;
+using StrawMan;
 using UIKit;
 
 namespace StrawMan.iOS {

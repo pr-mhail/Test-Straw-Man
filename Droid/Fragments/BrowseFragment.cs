@@ -6,6 +6,7 @@ using Android.Widget;
 using Android.Support.V4.Widget;
 using Android.App;
 using Android.Content;
+using StrawMan;
 
 namespace StrawMan.Droid {
     public class BrowseFragment : Android.Support.V4.App.Fragment, IFragmentVisible {

@@ -1,4 +1,7 @@
 ﻿using System;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using StrawMan.Helpers;
 
 namespace StrawMan {
     public class App {
@@ -10,6 +13,9 @@ namespace StrawMan {
                 ServiceLocator.Instance.Register<IDataStore<Item>, MockDataStore>();
             else
                 ServiceLocator.Instance.Register<IDataStore<Item>, CloudDataStore>();
+
+			Microsoft.AppCenter.AppCenter.Start(AppConstants.AppCenterStart,
+                               typeof(Analytics), typeof(Crashes));
         }
     }
 }

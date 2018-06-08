@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Mobile.BuildTools.1.3.0.599\build\Mobile.BuildTools.props" Condition="Exists('..\packages\Mobile.BuildTools.1.3.0.599\build\Mobile.BuildTools.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -9,6 +10,7 @@
     <RootNamespace>StrawMan.iOS</RootNamespace>
     <AssemblyName>StrawMan.iOS</AssemblyName>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AutomaticVersionBehavior>PreferBuildNumber</AutomaticVersionBehavior>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -167,6 +169,12 @@
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
-  <Import Project="..\StrawMan\StrawMan.projitems" Label="Shared" Condition="Exists('..\StrawMan\StrawMan.projitems')" />
+  <ItemGroup>
+    <ProjectReference Include="..\StrawMan\StrawMan.csproj">
+      <Project>{93D506B8-3D48-40CB-AA2A-D012D4B9CFD7}</Project>
+      <Name>StrawMan</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\Mobile.BuildTools.1.3.0.599\build\Mobile.BuildTools.targets" Condition="Exists('..\packages\Mobile.BuildTools.1.3.0.599\build\Mobile.BuildTools.targets')" />
 </Project>
