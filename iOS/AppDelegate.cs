@@ -1,6 +1,12 @@
 ﻿using Foundation;
 using UIKit;
 
+
+using StrawMan;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+
 namespace StrawMan.iOS {
     // The UIApplicationDelegate for the application. This class is responsible for launching the
     // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
@@ -14,9 +20,8 @@ namespace StrawMan.iOS {
         }
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions) {
-            App.Initialize();
 
-
+			App.Initialize();
 
             return true;
         }
